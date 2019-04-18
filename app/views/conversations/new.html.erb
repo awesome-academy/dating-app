@@ -1,0 +1,10 @@
+<div class="col-md-9">
+  <h1>new</h1>
+
+    <%= form_for [@conversation, @conversation.messages.new] do |f| %>
+      <%= f.hidden_field :sender_id, value: current_user.id %>
+      <%= f.text_area :body, class: "form-control" %>
+      <%= f.submit "Send", class: "btn btn-success" %>
+    <% end %>
+
+</div>

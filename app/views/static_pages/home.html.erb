@@ -1,11 +1,25 @@
 <div class="content">
-  <% if user_signed_in? %>
-    <div class="side-bar col-md-3">
-      <%= render "static_pages/side_bar" %>
+<% if user_signed_in? %>
+  <div class="col-md-3">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">User list</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+          <% @users.each do |user| %>
+            <li><%= link_to user.email, conversation_path(id: 9) %></li>
+
+          <% end %>
+        </ul>
+      </div>
     </div>
-    <div class="main-content col-md-9">
-    </div>
-    <div class="clearfix"></div>
+  </div>
+  <div class="col-md-9">
+
+  </div>
+</div>
+<div class="clearfix"></div>
   <% else %>
     <div class="block-1"></div>
     <div class="teaser animated">

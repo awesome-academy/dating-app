@@ -2,4 +2,16 @@
   <li>
     <h4 class="dashboard"><%= t ".inbox" %></h4>
   </li>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">User list</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+          <% @users.each do |user| %>
+            <li><%= link_to user.email, conversation_path(user_id: user) %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
 </ul>

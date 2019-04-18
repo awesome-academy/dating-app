@@ -20,7 +20,7 @@
             </li>
           <% else %>
             <li>
-              <%= link_to t(".create"), new_information_user_path(current_user) %>
+              <%= link_to t(".create"), new_information_user_path(current_user.id) %>
             </li>
           <% end %>
           <li class="divider"></li>
